@@ -71,6 +71,7 @@
         
         $('#newIssue').submit(function(e){
           e.preventDefault();
+          // console.log($(this).serialize())
           $(this).attr('action', "/api/issues/" + currentProject);
           $.ajax({
             type: "POST",
